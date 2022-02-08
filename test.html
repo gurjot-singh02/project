@@ -1,0 +1,80 @@
+<style>
+  .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.5s;
+  }
+
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+    float: left;
+    width: 100px;
+  }
+</style>
+
+<div id="container">
+  <div id="nav" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="https://jungleworks.com/">Dashboard</a>
+    <a href="https://jungleworks.com/jugnoo-indias-leading-auto-rickshaw-aggregator-client-success-story/">Drivers</a>
+    <a href="https://jungleworks.com/yelo/">Customer</a>
+    <a href="https://jungleworks.com/tookan/">All Vehicles</a>
+    <a href="https://help.jungleworks.com/">Settings</a>
+  </div>
+  <div id="main">
+    <button type="button" class="openbtn" onclick="openNav()"><img src="logo.png" height="50" width="120" /></button>
+    <h2>Gurjot Singh</h2>
+  </div>
+  <div class="content" style="text-align: center;">
+    <img src="http://docs.google.com/uc?id=13ZvKp86rNgPhbeLKRn7DmtEs90LrB1H3" height="730px">
+  </div>
+</div>
+
+<!-- 13ZvKp86rNgPhbeLKRn7DmtEs90LrB1H3 -->
+<!-- 13ZvKp86rNgPhbeLKRn7DmtEs90LrB1H3 -->
+
+
+<!-- script for navbar -->
+<script>
+  function openNav() {
+    document.getElementById("nav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+  }
+
+  function closeNav() {
+    document.getElementById("nav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+  }
+
+  
+</script>
+<!-- --------------------- -->
