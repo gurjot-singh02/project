@@ -54,8 +54,11 @@
     <button type="button" class="openbtn" onclick="openNav()"><img src="logo.png" height="50" width="120" /></button>
     <h2>Gurjot Singh</h2>
   </div>
-  <div class="content" style="text-align: center;">
+  <div id="content" style="text-align: center;">
+    <!-- <button id="btn">SAY HI</button> -->
     <img src="http://docs.google.com/uc?id=13ZvKp86rNgPhbeLKRn7DmtEs90LrB1H3" height="730px">
+    <!-- <img src="https://cdn.vox-cdn.com/thumbor/8tLchaDMIEDNzUD3mYQ7v1ZQL84=/0x0:2012x1341/920x613/filters:focal(0x0:2012x1341):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/47070706/google2.0.0.jpg" height="730px"> -->
+    <!-- <img src="" alt="image" height="730px"> -->
   </div>
 </div>
 
@@ -75,6 +78,15 @@
     document.getElementById("main").style.marginLeft = "0";
   }
 
+  // https://cdn.vox-cdn.com/thumbor/8tLchaDMIEDNzUD3mYQ7v1ZQL84=/0x0:2012x1341/920x613/filters:focal(0x0:2012x1341):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/47070706/google2.0.0.jpg
+  fetch('http://docs.google.com/uc?id=13ZvKp86rNgPhbeLKRn7DmtEs90LrB1H3&alt=media')
+  .then(Response=>{
+    console.log(Response);
+    return Response.blob();
+  }).then(blob =>{
+    console.log(blob);
+    document.getElementById('content').src = URL.createObjectURL(blob);
+  });
   
 </script>
 <!-- --------------------- -->
